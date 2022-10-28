@@ -38,7 +38,12 @@ df['info_source'] = le.fit_transform(df['info_source'])
 df['tour_arrangement'] = le.fit_transform(df['tour_arrangement'])
 df['payment_mode'] = le.fit_transform(df['payment_mode'])
     
-    
+  
+train_df['total_female'] = train_df['total_female'].astype(int)
+train_df['total_male'] = train_df['total_male'].astype(int)
+train_df['night_mainland'] = train_df['night_mainland'].astype(int)
+train_df['night_zanzibar'] = train_df['night_zanzibar'].astype(int)
+
 target = df['total_cost']
 feat_cols = df.drop(["total_cost"],1)
 cols = feat_cols.columns
