@@ -92,9 +92,9 @@ def app():
     
     travel_with = col1.selectbox('Travel With',train_df['travel_with'].unique())
 
-    total_male = col1.slider('Total Male',train_df['total_male'].min(),train_df['total_male'].max())
+    total_male = col1.slider('Total Male',0,20)
     
-    total_female = col1.slider('Total Female',train_df['total_female'].min(),train_df['total_female'].max())
+    total_female = col1.slider('Total Female',0,20)
     
     
     purpose = col2.selectbox('Purpose of Visit',train_df['purpose'].unique())
@@ -105,9 +105,9 @@ def app():
     
     tour_arrangement= col2.selectbox('Tour Arrangement',train_df['tour_arrangement'].unique())
     
-    night_zanzibar = col2.slider('Night Zanzibar',train_df['night_zanzibar'].min(),train_df['night_zanzibar'].max())
+    night_zanzibar = col2.slider('Night Zanzibar',0,30)
     
-    night_mainland = col3.slider('Night Mainland',train_df['night_mainland'].min(),train_df['night_mainland'].max())
+    night_mainland = col3.slider('Night Mainland',0,30)
     
     payment_mode = col3.selectbox('Payment Mode',train_df['payment_mode'].unique())
     
