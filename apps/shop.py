@@ -160,7 +160,7 @@ def app():
         cbr_loaded =joblib.load(cbr_mode)
         
         
-        gbr_result = gbr_loaded.predict(usInf)
+        #gbr_result = gbr_loaded.predict(usInf)
         cbr_result = cbr_loaded.predict(usInf)
         
         rfr_preds = rfr.predict(usInf)
