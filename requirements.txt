@@ -1,0 +1,6 @@
+category-encoders==2.5.0
+joblib==1.1.0
+streamlit==1.10.0
+Scikit-learn==1.1
+xgboost==1.6.1
+pickle5==0.0.11
