@@ -15,7 +15,7 @@ le = LabelEncoder()
 scaler = MinMaxScaler(feature_range=(0, 1))
 
 rfr = RandomForestRegressor()
-gbr = GradientBoostingRegressor()
+#gbr = GradientBoostingRegressor()
 cbr = CatBoostRegressor()
 
 
