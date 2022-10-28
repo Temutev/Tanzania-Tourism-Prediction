@@ -156,7 +156,7 @@ def app():
         
         #usInf = scaler.fit_transform(usInf)
         
-        gbr_loaded = joblib.load(final_mode)
+        #gbr_loaded = joblib.load(final_mode)
         cbr_loaded =joblib.load(cbr_mode)
         
         
