@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import  MinMaxScaler
 import joblib
-from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
+from sklearn.ensemble import RandomForestRegressor
 from catboost import CatBoostRegressor
 
 final_mode = 'gradient_boosting_regressor_model.sav'
@@ -49,7 +49,7 @@ feat_cols = df.drop(["total_cost"],1)
 cols = feat_cols.columns
     
 rfr.fit(df[cols],target)
-gbr.fit(df[cols],target)
+#gbr.fit(df[cols],target)
 
 
 for i in range(10):
@@ -164,12 +164,12 @@ def app():
         cbr_result = cbr_loaded.predict(usInf)
         
         rfr_preds = rfr.predict(usInf)
-        gbr_preds = gbr.predict(usInf)
+        #gbr_preds = gbr.predict(usInf)
         cbr_preds = ct.predict(usInf)
         
         st.write('The predicted amount of money a tourist is likely to spend in Tanzania in USD using RandomForestRegressor is : ', rfr_preds[0]* 0.00043)
         
-        st.write('The predicted amount of money a tourist is likely to spend in Tanzania in USD using GradientBoostingRegressor is: ',gbr_preds[0] *0.00043)
+        #st.write('The predicted amount of money a tourist is likely to spend in Tanzania in USD using GradientBoostingRegressor is: ',gbr_preds[0] *0.00043)
         
         st.write('The predicted amount of money a tourist is likely to spend in Tanzania in USD using CatBoostRegressor is: ',cbr_preds[0] *0.00043)
         
